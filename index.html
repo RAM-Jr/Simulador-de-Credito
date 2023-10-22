@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+    <title>SIMULADOR DE CRÉDITO - @code.scientist x @codingtorque</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>SIMULADOR DE CRÉDITO</h1>
+        <div class="form-input">
+            <span class="input-icon">MZN</span>
+            <input type="number" min="0" step="3" class="input" id="valor" placeholder="Valor Solicitado">
+        </div>
+        <div class="form-input">
+            <span class="input-icon"><i class="fas fa-percentage"></i></span>
+            <input type="number" class="input" id="taxa" placeholder="Taxa">
+        </div>
+        <div class="form-input">
+            <span class="input-icon"><i class="fas fa-calendar"></i></span>
+            <input type="number" class="input" id="meses" placeholder="Prazo de Pagamento">
+        </div>
+
+        <button class="calculateBtn" onclick="calculateLoan()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/formulajs/formulajs@2.9.3/dist/formula.min.js"></script> 
+    <script src="main.js"></script>
+</body>
+
+</html>
