@@ -25,16 +25,28 @@
     <div class="container">
         <h1>SIMULADOR DE CRÉDITO</h1>
         <div class="form-input">
-            <span class="input-icon">MZN</span>
-            <input type="number" min="0" step="3" class="input" id="valor" placeholder="Valor Solicitado">
+            <span class="input-icon">Salário:&nbsp;&nbsp;</span>
+            <input type="number" class="input" id="salario" placeholder="Salário Mensal">
+            <span>MZN</span>
         </div>
         <div class="form-input">
-            <span class="input-icon"><i class="fas fa-percentage"></i></span>
+            <span class="input-icon">Crédito:&nbsp;</span>
+            <input type="number" class="input" id="valor" placeholder="Valor Solicitado"> 
+            <span>MZN</span>
+        </div>
+        <div class="form-input">
+            <span class="input-icon" >Taxa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <input type="number" class="input" id="taxa" placeholder="Taxa">
+            <span class="input-icon"><i class="fas fa-percentage"></i></span>
         </div>
         <div class="form-input">
-            <span class="input-icon"><i class="fas fa-calendar"></i></span>
-            <input type="number" class="input" id="meses" placeholder="Prazo de Pagamento">
+            <span class="input-icon-slider">Prazo:&nbsp;&nbsp;&nbsp;</span>
+
+            <div class="slider"><input id="input_slider" type="range" min="0" max="11" step="1" value="0" >
+                <span id="rangeValue"></span><span>&nbsp;Meses</span>
+            </div>
+
+            <input type="hidden" id="slider_value" value="3487">
         </div>
 
         <button class="calculateBtn" onclick="calculateLoan()">Calculate</button>
